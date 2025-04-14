@@ -1,0 +1,82 @@
+name: oakrigs
+
+services:
+  mongo:
+    image: mongo:8
+    # ports:
+    #   - 27019:27017
+    volumes:
+      - mongo-data-oakrigs:/data/db
+    networks:
+      - oakrigs
+
+  api-development:
+    build:
+      context: ./server/
+      dockerfile: ./Dockerfile
+      target: development
+    restart: unless-stopped
+    env_file:
+      - ./server/.env
+    volumes:
+      #  - ./server/src:/app  not src expression
+      - ./server:/app #docker app path must be absolute
+      - /app/node_modules
+    networks:
+      - oakrigs
+    ports:
+      - 1234:1234
+    depends_on:
+      - mongo
+
+  api-production:
+    build:
+      context: ./server/
+      dockerfile: ./Dockerfile
+      target: production
+    restart: unless-stopped
+    env_file:
+      - ./server/.env
+
+    networks:
+      - oakrigs
+    ports:
+      - 1235:1234
+    depends_on:
+      - mongo
+
+  client-development:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+      target: development
+    restart: unless-stopped
+    volumes:
+      - ./client:/app #docker app path must be absolute
+      - /app/node_modules
+    networks:
+      - oakrigs
+    ports:
+      - 3000:3000
+    depends_on:
+      - api-development
+
+  client-production:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+      target: production
+    restart: unless-stopped
+    networks:
+      - oakrigs
+    ports:
+      - 80:80
+      - 443:443   
+    depends_on:
+      - api-production
+
+volumes:
+  mongo-data-oakrigs:
+networks:
+  oakrigs:
+    driver: bridge

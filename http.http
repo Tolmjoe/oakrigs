@@ -1,0 +1,28 @@
+###
+HTTP/1.1 200 OK
+POST http://localhost:1234/user/userlogin
+content-type: application/json
+
+{
+    "email" :"abitogun22@gmail.com",
+    "password" : "pass123"
+}
+
+
+
+# to test auth midddleware
+###
+POST http://localhost:1234/user/userauth
+content-type: application/json 
+
+
+# get all users
+###
+GET  http://localhost:1234/user/getallusers
+
+
+
+# POST https://localhost:1234/user/userlogin
+###
+POST http://localhost:1234/user/userauth
+content-type: application/json multipart/form-data
