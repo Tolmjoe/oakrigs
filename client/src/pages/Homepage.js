@@ -47,7 +47,7 @@ function Homepage() {
 
   useEffect(() => {
 
-    $("profile_inner").hide();
+    $(".profile_inner").hide();
     $("#hi ").hide();
     $("#femi").hide();
 
@@ -61,14 +61,15 @@ function Homepage() {
       });
     });
 
-    setInterval(() => {
+    const bounceInterval= setInterval(() => {
 
-      $(".profile #hi").effect("bounce", { times: 8, distance: -60 }, 10000);
-      $(".profile  #femi").effect("bounce", { times: 10, distance: -20 }, 10000);
+      $(".profile #hi").effect("bounce", { times: 5, distance: 20 }, 400);
+      $(".profile  #femi").effect("bounce", { times: 5, distance: 20 }, 400);
     }, 6000);
 
-
+    return () => clearInterval(bounceInterval);
   }, [])
+
   $(document).ready(() => {
     $("#dkmodebutton").click(() => {
       $(".body1, .body2, .body3, .foot, .welcomemessage").toggleClass("dkmode");
@@ -100,7 +101,7 @@ function Homepage() {
           <div className="logoname">
             <span style={{ fontSize: "4rem", color: "white" }} className="logosection">O</span><span className='ackrigs'
               style={{ color: "whitesmoke", fontSize: "2rem" }}
-            >aktabytes</span>
+            >akrigs</span>
 
             <img src={img} className="oakseed" style={{ width: "50px", height: "60px" }} alt='oakseedlogo' />
 
