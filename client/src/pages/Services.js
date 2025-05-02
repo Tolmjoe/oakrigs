@@ -12,6 +12,10 @@ import da3 from "../image/da3.jpg";
 import pro1 from "../image/pro1.jpg";
 import pro2 from "../image/pro2.jpg";
 import pro3 from "../image/pro3.jpg";
+import ml1 from "../image/ml1.jpg";
+import ml2 from "../image/ml2.jpg";
+import ml3 from "../image/ml3.jpg";
+
 
 const content = {
     training: {
@@ -95,19 +99,19 @@ const content = {
                 title: 'AI, ML, and Deep Learning',
                 description: 'The use of Python and R in Artificial Learning,' +
                     'Machine Learning, Deep Learning, and the interconnection  between them.',
-                image: sd1,
+                image: ml1,
             },
             {
                 title: 'Effective workflow',
                 description: 'Our team instructs efficiently using algorithmic methodologies and ' +
                     'visual mnemonics.',
-                image: sd2,
+                image: ml2,
             },
             {
                 title: 'Hand-on Projects',
                 description: 'We will take you through many hands-on projects that will' +
                     'ease the understanding and application of taught concepts',
-                image: sd3,
+                image: ml3,
             },
         ],
     },
