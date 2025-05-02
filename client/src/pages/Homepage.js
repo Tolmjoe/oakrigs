@@ -63,8 +63,8 @@ function Homepage() {
 
     const bounceInterval= setInterval(() => {
 
-      $(".profile #hi").effect("bounce", { times: 5, distance: 20 }, 400);
-      $(".profile  #femi").effect("bounce", { times: 5, distance: 20 }, 400);
+      $(".profile #hi").effect("bounce", { times: 3, distance: 20 }, 700);
+      $(".profile  #femi").effect("bounce", { times: 3, distance: 20 }, 700);
     }, 6000);
 
     return () => clearInterval(bounceInterval);
