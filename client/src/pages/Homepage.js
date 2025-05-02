@@ -99,8 +99,8 @@ function Homepage() {
 
         <div className="navbar">
           <div className="logoname">
-            <span style={{ fontSize: "4rem", color: "white" }} className="logosection">O</span><span className='ackrigs'
-              style={{ color: "whitesmoke", fontSize: "2rem" }}
+            <span style={{ fontSize: "4rem", color: "white" }} className="logosection">O</span><span
+              style={{ color: "whitesmoke", fontSize: "24px" }}
             >akrigs</span>
 
             <img src={img} className="oakseed" style={{ width: "50px", height: "60px" }} alt='oakseedlogo' />
