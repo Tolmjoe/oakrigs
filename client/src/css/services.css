@@ -1,0 +1,89 @@
+.service-page {
+    font-family: sans-serif;
+    background: rgba(50, 26, 2, 0.69);
+}
+
+.service-back {
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.service-title {
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.service-description {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.feature-nav {
+    position: fixed;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    background-color: rgba(28, 6, 6, 0.78);
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.feature-nav button {
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.23);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.feature-slide {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: rgba(27, 14, 1, 0.62);
+    margin-top: 10px;
+}
+
+.feature-slide img.feature-image {
+    width: 80%;
+    max-width: 700px;
+    height: 320px;
+    margin: 5px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-title {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: rgba(16, 13, 1, 0.58);
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.feature-description {
+    font-size: 18px;
+    color: #ffffff;
+    max-width: 600px;
+    text-align: center;
+    background-color: rgba(16, 13, 1, 0.78);
+    padding: 6px;
+}

@@ -10,6 +10,11 @@ import "../src/css/@media.css";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import PageUnderDevelopment from "./pages/PageUnderDevelopment";
+import SoftwareTraining from "./pages/SoftwareTraining";
+import SoftwareDevelopment from "./pages/SoftwareDevelopment";
+import Projects from "./pages/Projects";
+import MachineDevelopment from "./pages/MachineDevelopment";
+import DataAnalysis from "./pages/DataAnalysis";
 function App() {
 
   const router = createBrowserRouter(createRoutesFromElements(
@@ -21,7 +26,13 @@ function App() {
       <Route path="register" element={<Register/>}/>
 
       <Route path="login" element={<Login/>} />
-      <Route path="underdevelopment" element={<PageUnderDevelopment/>} />  
+        <Route path="software-tra" element={<SoftwareTraining/>} />
+        <Route path="software-dev" element={<SoftwareDevelopment/>}/>
+        <Route errorElement="There is an error with this path" path="projects" element={<Projects/>}/>
+        <Route path="machine-dev" element={<MachineDevelopment/>}/>
+        <Route path="datans" element={<DataAnalysis/>}/>
+        <Route path="underdevelopment" element={<PageUnderDevelopment/>}/>
+        <Route path="underdevelopment" element={<PageUnderDevelopment/>}/>
     </Route>
   ))
   return (

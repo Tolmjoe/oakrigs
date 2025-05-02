@@ -116,12 +116,12 @@ function Homepage() {
               <li className="serbut">
                 <a className="serdrop" href="#">Services</a>
                 <div className="drop">
-                  <a onClick={() => navigate("/underdevelopment")}>Software Training</a>
-                  <a onClick={() => navigate("/underdevelopment")}>Software Development</a>
-                  <a onClick={() => navigate("/underdevelopment")}>Projects</a>
+                  <a onClick={() => navigate("/software-tra")}>Software Training</a>
+                  <a onClick={() => navigate("/software-dev")}>Software Development</a>
+                  <a onClick={() => navigate("/projects")}>Projects</a>
 
-                  <a onClick={() => navigate("/underdevelopment")}>Machine learning</a>
-                  <a onClick={() => navigate("/underdevelopment")}>Data Analysis</a>
+                  <a onClick={() => navigate("/machine-dev")}>Machine learning</a>
+                  <a onClick={() => navigate("/datans")}>Data Analysis</a>
                   <a onClick={() => navigate("/underdevelopment")}>Domain registration</a>
                   <a onClick={() => navigate("/underdevelopment")}>Networking</a>
 
