@@ -61,16 +61,17 @@ function Homepage() {
       });
     });
 
-    const bounceInterval= setInterval(() => {
+      const bounce = setInterval(() => {
+        $(".profile #hi").effect("bounce", { times: 7, distance: 30 }, 1200);
+        $(".profile #femi").effect("bounce", { times: 7, distance: 45 }, 1200);
+      }, 4000);
 
-      $(".profile #hi").effect("bounce", { times: 3, distance: 20 }, 700);
-      $(".profile  #femi").effect("bounce", { times: 3, distance: 20 }, 700);
-    }, 6000);
+      return () => clearInterval(bounce);
+    }, []);
 
-    return () => clearInterval(bounceInterval);
-  }, [])
 
-  $(document).ready(() => {
+
+    $(document).ready(() => {
     $("#dkmodebutton").click(() => {
       $(".body1, .body2, .body3, .foot, .welcomemessage").toggleClass("dkmode");
 
@@ -99,11 +100,8 @@ function Homepage() {
 
         <div className="navbar">
           <div className="logoname">
-            <span style={{ fontSize: "4rem", color: "white" }} className="logosection">O</span><span
-              style={{ color: "whitesmoke", fontSize: "24px" }}
-            >akrigs</span>
 
-            <img src={img} className="oakseed" style={{ width: "50px", height: "60px" }} alt='oakseedlogo' />
+            <img src={minilogo} className="oakseed" alt='oakseedlogo' />
 
           </div>
           <div className="navbarulist">

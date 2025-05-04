@@ -5,7 +5,14 @@
     background-size: cover !important;
     background-position: center !important;
   }
+  .navbar {
+    padding: 12px 0 0 0;
 
+  }
+  .oakseed {
+    height: 130px;
+    width: 130px;
+  }
 
 
   .acktabytes {

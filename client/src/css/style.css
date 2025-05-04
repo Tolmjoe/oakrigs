@@ -136,31 +136,50 @@ ul {
   background-color: #590909ef;
 }
 
+@font-face {
+  font-family: "Blood";
+  src: url('../fonts/BloodOmen.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .welcome {
   background: linear-gradient(#8fd71d, #fcfcfc);
   background-clip: text;
-  font-family: star;
+  font-family: "Blood";
   text-align: center;
   /* color: transparent; */
-  font-size: 35px;
+  font-size: 38px;
 }
 
 .nav {
   margin-top: 10px;
+
+}
+
+.navbar {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
 }
 
 .logoname {
   font-family: "Lucida Bright",sans-serif;
-}
-
-.logosection {
   position: relative;
+  height: 0;
+
 }
 
-.logosection img {
+.oakseed {
   position: absolute;
-  left: 11rem;
-  top: 5px;
+  top: -60px;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  z-index: 100;
 }
 
 .logo {
@@ -170,8 +189,6 @@ ul {
 
 .loginbut {
   background-color: #4c2b2bc8;
-  height: 100px;
-  width: 200px;
   border: 2px solid #563131e4;
   border-radius: 10px;
   padding: 10px;
@@ -216,13 +233,6 @@ ul {
   padding: 10px;
   color: rgb(255, 255, 255);
   background-color: #4c2b2bc8;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
 }
 
 .navbarulist {
